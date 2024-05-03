@@ -1,9 +1,11 @@
-{
+module.exports = {
   "root": true,
   "extends": ["eslint:recommended", "plugin:react/recommended", "plugin:react-native/all"],
   "parser": "@babel/eslint-parser",
   "parserOptions": {
-    "requireConfigFile": false
+    "ecmaFeatures": {
+      "jsx": true
+    }
   },
   "env": {
     "browser": true,
