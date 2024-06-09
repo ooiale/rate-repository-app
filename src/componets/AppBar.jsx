@@ -3,7 +3,10 @@ import Constants from 'expo-constants';
 import AppBarItem from './AppBarItem';
 
 import { useNavigate } from 'react-router-native';
-
+import { useQuery } from '@apollo/client';
+import { GET_LOGGED_USER } from '../graphql/queries';
+import useAuthStorage from '../hooks/useAuthStorage';
+import { useApolloClient } from '@apollo/client';
 
 const styles = StyleSheet.create({
   container: {
@@ -23,9 +26,18 @@ const styles = StyleSheet.create({
 
 
 const AppBar = () => {
+  const authStorage = useAuthStorage()
+  const apolloClient = useApolloClient()
   const nagivate = useNavigate()
+  const {data, loading} = useQuery(GET_LOGGED_USER)
+  if (loading) {
+    return <></>
+  }
 
-  
+  const onLogout = () => {
+    authStorage.removeAccessToken()
+    apolloClient.resetStore()
+  }
 
   return (
     <View style={[styles.container]}>
@@ -36,7 +48,11 @@ const AppBar = () => {
         decelerationRate="fast"  // Makes the scrolling feel more responsive
       >
         <AppBarItem style = {styles.flexItem} text={'repositories'} onPress={() => nagivate('/')}/>
-        <AppBarItem style = {styles.flexItem} text={'sign-in'} onPress={() => nagivate('/sign-in')}/>
+        {data.me 
+        ? <AppBarItem style = {styles.flexItem} text={'sign-out'} onPress={onLogout}/> 
+        :<AppBarItem style = {styles.flexItem} text={'sign-in'} onPress={() => nagivate('/sign-in')}/>
+
+        }
       </ScrollView>
     </View>
   )
