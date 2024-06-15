@@ -9,7 +9,7 @@ The most noticeable difference from developing a plain React web app were the un
 ## Major Challenges
 
 ### Dealing with `<FlatList>`
-The biggest issue was dealing with the `<FlatList>` component. The header component for it was not working as expected, so in the end, I removed the component from the `<FlatList>` field and placed it outside of it.
+The biggest issue was dealing with the `<FlatList>` component. The header component prop for it was not working as expected, so in the end, I removed the component from the `<FlatList>` prop field and placed it outside of it. Not really what I wanted but worked just as fine.
 
 ## Optional Note on Deployment
 
