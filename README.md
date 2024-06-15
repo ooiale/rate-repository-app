@@ -1,6 +1,6 @@
 # React Native Project
 
-This was my very first project using React Native. 
+This was my very first project using React Native. Note: The apollo database used as well as all the backend stuff are not here. 
 
 ## Key Differences from React Web Development
 
