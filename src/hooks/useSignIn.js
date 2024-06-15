@@ -20,6 +20,7 @@ const useSignIn = () => {
       return token;
     } catch (e) {
       console.error('Authentication error: ', e);
+      throw new Error(e)
     }
   };
 

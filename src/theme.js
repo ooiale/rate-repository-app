@@ -1,5 +1,27 @@
 import {StyleSheet, Platform} from 'react-native'
 
+export const formStyles = StyleSheet.create({
+  container: {
+    padding: 16,
+  },
+  label: {
+    marginBottom: 0,
+  },
+  input: {
+    borderWidth: 1,
+    borderColor: '#ccc',
+    padding: 8,
+    marginBottom: 4,
+    borderRadius: 4,
+  },
+  button: {
+    backgroundColor: '#007bff',
+    padding: 10,
+    borderRadius: 4,
+    alignItems: 'center',
+  },
+})
+
 export const repositoryStyles = StyleSheet.create({
   container: {
     flexDirection: 'column'
@@ -21,6 +43,31 @@ export const repositoryStyles = StyleSheet.create({
   },
   bottomRow: {
     flex: 4,
+    flexDirection: 'row',
+    justifyContent: 'space-around',
+    alignItems: 'center',
+    paddingLeft: 10,
+    paddingTop: 10,
+    backgroundColor: '#f0f0f0'
+  },
+  containerReview: {
+    flexDirection: 'column',
+    height: '90%',
+  },
+  topRowReview: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    paddingLeft: 10,
+    paddingTop: 10,
+    backgroundColor: '#f0f0f0',
+  },
+  middleRowReview: {
+    justifyContent: 'center',
+    paddingLeft: 80,
+    paddingTop: 10,
+    backgroundColor: '#f0f0f0'
+  },
+  bottomRowReview: {
     flexDirection: 'row',
     justifyContent: 'space-around',
     alignItems: 'center',
@@ -50,6 +97,13 @@ export const repositoryStyles = StyleSheet.create({
     width: 50, 
     height: 50, 
     borderRadius: 5, 
+  },
+  repositoryItemButton: {
+    backgroundColor: '#007bff',
+    margin: 10,
+    padding: 10,
+    borderRadius: 4,
+    alignItems: 'center',
   },
 });
 
