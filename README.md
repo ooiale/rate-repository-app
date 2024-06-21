@@ -1,6 +1,16 @@
 # React Native Project
 
-This was my very first project using React Native. Note: The apollo database used as well as all the backend stuff are not here. 
+This was my very first project using React Native.
+
+## Installation Guide
+
+To install this project, follow these steps:
+
+1. **Fork this repository** to your own GitHub account.
+2. **Clone your forked repository** to your local machine.
+3. Run `npm install` on the root directory to install the dependencies.
+
+For the backend server, follow the process outlined in the [rate-repository-api repository](https://github.com/fullstack-hy2020/rate-repository-api).
 
 ## Key Differences from React Web Development
 
